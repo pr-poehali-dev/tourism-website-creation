@@ -4,10 +4,24 @@ import { Card, CardContent } from '@/components/ui/card';
 import Icon from '@/components/ui/icon';
 
 const destinations = [
-  { name: 'Алтай', country: 'Россия', tours: 12, image: 'https://cdn.poehali.dev/projects/1fc59c6b-d5c3-49a1-9bba-81f837cf5a8b/files/ea1cdd3b-43e9-423a-8090-8477400ced72.jpg' },
-  { name: 'Бали', country: 'Индонезия', tours: 8, image: 'https://cdn.poehali.dev/projects/1fc59c6b-d5c3-49a1-9bba-81f837cf5a8b/files/d149a28c-8b45-48dd-b9de-eded0785370a.jpg' },
-  { name: 'Норвегия', country: 'Скандинавия', tours: 6, image: 'https://cdn.poehali.dev/projects/1fc59c6b-d5c3-49a1-9bba-81f837cf5a8b/files/e775c166-1fd2-42e0-836a-89202576d84b.jpg' },
-  { name: 'Кения', country: 'Африка', tours: 5, image: '/placeholder.svg' }
+  { 
+    name: 'Пляжный отдых', 
+    description: 'Райские пляжи и тропические острова',
+    tours: 15,
+    image: 'https://cdn.poehali.dev/projects/1fc59c6b-d5c3-49a1-9bba-81f837cf5a8b/files/19b95802-130c-40e9-9301-710cb59cbde2.jpg'
+  },
+  { 
+    name: 'Горные туры', 
+    description: 'Приключения в горах и альпинизм',
+    tours: 12,
+    image: 'https://cdn.poehali.dev/projects/1fc59c6b-d5c3-49a1-9bba-81f837cf5a8b/files/93bdd2a5-2749-40ec-a5b7-3b7ff3cdfac1.jpg'
+  },
+  { 
+    name: 'Экскурсии', 
+    description: 'Культурные туры и достопримечательности',
+    tours: 20,
+    image: 'https://cdn.poehali.dev/projects/1fc59c6b-d5c3-49a1-9bba-81f837cf5a8b/files/d9d372f1-ed60-4595-873c-49d3964d9546.jpg'
+  }
 ];
 
 const features = [
@@ -25,26 +39,21 @@ const features = [
     icon: 'Star',
     title: 'Лучшие цены',
     description: 'Прямые договоры с партнёрами'
-  },
-  {
-    icon: 'Heart',
-    title: 'Индивидуальный подход',
-    description: 'Туры под ваши пожелания'
   }
 ];
 
-const Index = () => {
+const Home = () => {
   return (
     <div className="min-h-screen">
       <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-secondary/20 to-accent/20" />
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-orange-500/20 to-purple-600/20" />
         <div 
-          className="absolute inset-0 bg-cover bg-center opacity-20"
-          style={{ backgroundImage: "url('https://cdn.poehali.dev/projects/1fc59c6b-d5c3-49a1-9bba-81f837cf5a8b/files/ea1cdd3b-43e9-423a-8090-8477400ced72.jpg')" }}
+          className="absolute inset-0 bg-cover bg-center opacity-30"
+          style={{ backgroundImage: "url('https://cdn.poehali.dev/projects/1fc59c6b-d5c3-49a1-9bba-81f837cf5a8b/files/19b95802-130c-40e9-9301-710cb59cbde2.jpg')" }}
         />
         
         <div className="relative z-10 text-center px-4 animate-fade-in">
-          <h1 className="text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+          <h1 className="text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-600 via-orange-500 to-purple-600 bg-clip-text text-transparent">
             Откройте мир вместе с нами
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
@@ -52,7 +61,7 @@ const Index = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/tours">
-              <Button size="lg" className="text-lg px-8 py-6 bg-gradient-to-r from-primary via-secondary to-accent hover:opacity-90 transition-all hover:scale-105">
+              <Button size="lg" className="text-lg px-8 py-6 bg-gradient-to-r from-blue-600 via-orange-500 to-purple-600 hover:opacity-90 transition-all hover:scale-105">
                 <Icon name="Compass" size={24} className="mr-2" />
                 Выбрать тур
               </Button>
@@ -73,7 +82,7 @@ const Index = () => {
             Популярные направления
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {destinations.map((dest, index) => (
               <Card 
                 key={dest.name}
@@ -86,10 +95,10 @@ const Index = () => {
                     alt={dest.name}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
                   <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                     <h3 className="text-2xl font-bold mb-1">{dest.name}</h3>
-                    <p className="text-sm opacity-90 mb-2">{dest.country}</p>
+                    <p className="text-sm opacity-90 mb-2">{dest.description}</p>
                     <div className="flex items-center gap-2">
                       <Icon name="MapPin" size={16} />
                       <span className="text-sm">{dest.tours} туров</span>
@@ -103,7 +112,7 @@ const Index = () => {
           <div className="text-center mt-12">
             <Link to="/tours">
               <Button size="lg" variant="outline" className="hover:scale-105 transition-all">
-                Смотреть все направления
+                Смотреть все туры
                 <Icon name="ArrowRight" size={20} className="ml-2" />
               </Button>
             </Link>
@@ -120,7 +129,7 @@ const Index = () => {
             Более 15 лет создаём идеальные путешествия
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <Card 
                 key={feature.title}
@@ -128,7 +137,7 @@ const Index = () => {
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <CardContent className="p-8">
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-primary via-secondary to-accent mb-4">
+                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-blue-600 via-orange-500 to-purple-600 mb-4">
                     <Icon name={feature.icon as any} size={32} className="text-white" />
                   </div>
                   <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
@@ -140,7 +149,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10">
+      <section className="py-20 bg-gradient-to-br from-blue-600/10 via-orange-500/10 to-purple-600/10">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-3xl mx-auto animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -151,7 +160,7 @@ const Index = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/tours">
-                <Button size="lg" className="text-lg px-8 py-6 bg-gradient-to-r from-primary via-secondary to-accent hover:opacity-90 transition-all hover:scale-105">
+                <Button size="lg" className="text-lg px-8 py-6 bg-gradient-to-r from-blue-600 via-orange-500 to-purple-600 hover:opacity-90 transition-all hover:scale-105">
                   Подобрать тур
                 </Button>
               </Link>
@@ -169,4 +178,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Home;

@@ -11,9 +11,6 @@ import {
 const navigation = [
   { name: 'Главная', href: '/' },
   { name: 'Туры', href: '/tours' },
-  { name: 'Галерея', href: '/gallery' },
-  { name: 'О нас', href: '/about' },
-  { name: 'Отзывы', href: '/reviews' },
   { name: 'Контакты', href: '/contact' }
 ];
 
@@ -26,10 +23,10 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <Link to="/" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary via-secondary to-accent flex items-center justify-center transition-transform group-hover:scale-110">
+            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-600 via-orange-500 to-purple-600 flex items-center justify-center transition-transform group-hover:scale-110">
               <Icon name="Plane" size={24} className="text-white" />
             </div>
-            <span className="text-2xl font-bold bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+            <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 via-orange-500 to-purple-600 bg-clip-text text-transparent">
               TravelDream
             </span>
           </Link>
@@ -49,7 +46,7 @@ const Navbar = () => {
                   >
                     {item.name}
                     {isActive && (
-                      <span className="absolute bottom-2 left-1/2 -translate-x-1/2 w-1/2 h-0.5 bg-gradient-to-r from-primary to-accent rounded-full" />
+                      <span className="absolute bottom-2 left-1/2 -translate-x-1/2 w-1/2 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full" />
                     )}
                   </Button>
                 </Link>
@@ -58,7 +55,7 @@ const Navbar = () => {
           </div>
 
           <div className="hidden md:block">
-            <Button className="bg-gradient-to-r from-primary via-secondary to-accent hover:opacity-90 transition-opacity">
+            <Button className="bg-gradient-to-r from-blue-600 via-orange-500 to-purple-600 hover:opacity-90 transition-opacity">
               <Icon name="Phone" size={18} className="mr-2" />
               +7 (800) 123-45-67
             </Button>
@@ -89,7 +86,7 @@ const Navbar = () => {
                     </Link>
                   );
                 })}
-                <Button className="w-full mt-4 bg-gradient-to-r from-primary via-secondary to-accent">
+                <Button className="w-full mt-4 bg-gradient-to-r from-blue-600 via-orange-500 to-purple-600">
                   <Icon name="Phone" size={18} className="mr-2" />
                   Позвонить
                 </Button>

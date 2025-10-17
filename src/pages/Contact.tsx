@@ -26,10 +26,10 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-background to-muted/20">
-      <div className="container mx-auto px-4 py-16">
+    <div className="min-h-screen py-20">
+      <div className="container mx-auto px-4">
         <div className="text-center mb-12 animate-fade-in">
-          <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+          <h1 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-blue-600 via-orange-500 to-purple-600 bg-clip-text text-transparent">
             Свяжитесь с нами
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -42,7 +42,7 @@ const Contact = () => {
             <Card className="hover:shadow-xl transition-all duration-300 animate-fade-in">
               <CardHeader>
                 <CardTitle className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center">
                     <Icon name="Phone" size={24} className="text-white" />
                   </div>
                   Телефон
@@ -58,7 +58,7 @@ const Contact = () => {
             <Card className="hover:shadow-xl transition-all duration-300 animate-fade-in" style={{ animationDelay: '100ms' }}>
               <CardHeader>
                 <CardTitle className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-secondary to-primary flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-orange-500 to-blue-600 flex items-center justify-center">
                     <Icon name="Mail" size={24} className="text-white" />
                   </div>
                   Email
@@ -73,7 +73,7 @@ const Contact = () => {
             <Card className="hover:shadow-xl transition-all duration-300 animate-fade-in" style={{ animationDelay: '200ms' }}>
               <CardHeader>
                 <CardTitle className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-accent to-secondary flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-purple-600 to-orange-500 flex items-center justify-center">
                     <Icon name="MapPin" size={24} className="text-white" />
                   </div>
                   Офис
@@ -86,17 +86,17 @@ const Contact = () => {
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-xl transition-all duration-300 animate-fade-in border-none bg-gradient-to-br from-primary/5 to-accent/5" style={{ animationDelay: '300ms' }}>
+            <Card className="hover:shadow-xl transition-all duration-300 animate-fade-in border-none bg-gradient-to-br from-blue-600/5 to-purple-600/5" style={{ animationDelay: '300ms' }}>
               <CardContent className="p-6">
                 <h3 className="font-bold text-lg mb-4">Мы в социальных сетях</h3>
                 <div className="flex gap-4">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center cursor-pointer hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center cursor-pointer hover:scale-110 transition-transform">
                     <Icon name="Instagram" size={24} className="text-white" />
                   </div>
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-secondary to-primary flex items-center justify-center cursor-pointer hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-orange-500 to-blue-600 flex items-center justify-center cursor-pointer hover:scale-110 transition-transform">
                     <Icon name="Facebook" size={24} className="text-white" />
                   </div>
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-accent to-secondary flex items-center justify-center cursor-pointer hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-purple-600 to-orange-500 flex items-center justify-center cursor-pointer hover:scale-110 transition-transform">
                     <Icon name="Send" size={24} className="text-white" />
                   </div>
                 </div>
@@ -157,7 +157,7 @@ const Contact = () => {
                   />
                 </div>
 
-                <Button type="submit" className="w-full text-lg py-6">
+                <Button type="submit" className="w-full text-lg py-6 bg-gradient-to-r from-blue-600 via-orange-500 to-purple-600 hover:opacity-90">
                   <Icon name="Send" size={20} className="mr-2" />
                   Отправить сообщение
                 </Button>
